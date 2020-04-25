@@ -1,10 +1,11 @@
 <?php
 
-App\User::create([
-    'name'=>'cris',
-    'email'=>'c@c.cl',
-    'password'=>bcrypt('123')
-]);
+// App\User::create([
+//     'name'=>'mono',
+//     'email'=>'mono@mono.cl',
+//     'password'=>bcrypt('123'),
+    
+// ]);
 
 
 /*
@@ -35,6 +36,8 @@ Route::view('/fee', 'fee')->name('fee');
 Route::view('/reglas', 'reglas')->name('reglas');
 Route::view('/tra', 'tra')->name('tra');
 Route::view('/contact', 'contact')->name('contact');
+
+Route::get('/usuarios', 'UsersController@index')->name('users.index');
 
 Route::post('contact', 'MessagesController@store');
 Auth::routes();

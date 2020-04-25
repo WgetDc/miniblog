@@ -37,7 +37,9 @@
                         href="{{route('tra')}}"
                         >@lang('Traders')</a>
                 </li>
+
                 @guest
+                    
                     <li class="nav-item">
                         <a class="nav-link" {{setActive('login')}}
                         href="{{route('login')}}"
@@ -45,14 +47,27 @@
                     </li>    
 
                 @else
+
+                @if (auth()->user()->role === 'admin')
+                <li class="nav-item">
+                    <a class="nav-link" {{setActive('usuarios')}}
+                    href="{{route('users.index')}}"
+                    >@lang('Usuarios')</a>
+                </li> 
+                @endif
+
                     <li class="nav-item">
                         <a class="nav-link" {{setActive('Cerrar Sesion')}} 
                         href="#" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">Cerrar Sesion</a>
-                    </li>                                    
+                    </li>              
 
+ 
                 @endguest
                 
+ 
+  
+               
                 
         
             </ul>
