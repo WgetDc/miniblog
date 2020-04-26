@@ -48,7 +48,7 @@
 
                 @else
 
-                @if (auth()->user()->role === 'admin')
+                @if (auth()->user()->hasRoles(['admin', 'estudiante']))
                 <li class="nav-item">
                     <a class="nav-link" {{setActive('usuarios')}}
                     href="{{route('users.index')}}"

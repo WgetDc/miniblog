@@ -1,8 +1,8 @@
 <?php
 
 // App\User::create([
-//     'name'=>'mono',
-//     'email'=>'mono@mono.cl',
+//     'name'=>'mechon',
+//     'email'=>'m@m.cl',
 //     'password'=>bcrypt('123'),
     
 // ]);
