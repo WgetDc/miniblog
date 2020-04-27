@@ -1,10 +1,10 @@
 <?php
 
 // App\User::create([
-//     'name'=>'mechon',
-//     'email'=>'m@m.cl',
+//     'name'=>'estudiante',
+//     'email'=>'estu@estu.cl',
 //     'password'=>bcrypt('123'),
-    
+//     'role_id'=>'1'
 // ]);
 
 
@@ -18,6 +18,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/roles', function(){
+    return \App\Role::with('user')->get();
+});
 
 Route::view('/', 'home')->name('home');
 

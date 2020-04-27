@@ -10,7 +10,7 @@ class UsersController extends Controller
 
     function __construct(){
         $this->middleware([
-            'auth', 'roles:admin,estudiante,otroRole'            
+            'auth','roles:admin'
             ]);        
     }
 
