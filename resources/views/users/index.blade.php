@@ -33,7 +33,17 @@
                     {{$role->display_name}}
                 @endforeach
                 {{$role->display_name}}</td>
-            <td></td>
+            <td>
+            <a class="btn btn-info btn-xs" href="{{route('usuarios.edit', $user->id)}}">Editar</a>
+                <form style="display:inline"
+                    method="POST"
+                    action="{{route('usuarios.destroy', $user->id)}}">
+                
+                    @csrf @method('DELETE')
+            
+                <button class="btn btn-danger btn-sx" type="submit">Eliminar</button>
+                </form>
+            </td>
 
             </tr>
             

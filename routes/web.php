@@ -41,9 +41,15 @@ Route::view('/reglas', 'reglas')->name('reglas');
 Route::view('/tra', 'tra')->name('tra');
 Route::view('/contact', 'contact')->name('contact');
 
+//Ruta de los usuarios
 Route::get('/usuarios', 'UsersController@index')->name('users.index');
+Route::get('/usuarios/{usuarios}/edit', 'UsersController@edit')->name('usuarios.edit');
+Route::delete('/usuarios/{usuarios}', 'UsersController@destroy')->name('usuarios.destroy');
 
+//Ruta de contacto
 Route::post('contact', 'MessagesController@store');
+
+//Ruta autocreada
 Auth::routes();
 
 
