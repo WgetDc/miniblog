@@ -10,7 +10,8 @@ use App\Http\Requests\UpdateUserRequest;
 
 class UsersController extends Controller
 {
-
+    
+    //Aprendiendo Laravel? Que alegria ver como siguen dandole fuerte al estudio. Mucho exito en su proyecto Cristobal!
     function __construct()
     {
         $this->middleware('auth');
