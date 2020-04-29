@@ -44,6 +44,7 @@ Route::view('/contact', 'contact')->name('contact');
 //Ruta de los usuarios
 Route::get('/usuarios', 'UsersController@index')->name('users.index');
 Route::get('/usuarios/{usuarios}/edit', 'UsersController@edit')->name('usuarios.edit');
+Route::patch('/usuarios/{usuarios}', 'UsersController@update')->name('usuarios.update');
 Route::delete('/usuarios/{usuarios}', 'UsersController@destroy')->name('usuarios.destroy');
 
 //Ruta de contacto

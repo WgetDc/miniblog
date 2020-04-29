@@ -48,7 +48,7 @@
 
                 @else
 
-                @if (auth()->user()->hasRoles(['admin', 'estudiante']))
+                @if (auth()->user()->hasRoles(['admin', 'mod']))
                 <li class="nav-item">
                     <a class="nav-link" {{setActive('usuarios')}}
                     href="{{route('users.index')}}"
@@ -60,7 +60,10 @@
                         <a class="nav-link" {{setActive('Cerrar Sesion')}} 
                         href="#" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">Cerrar Sesion</a>
-                    </li>              
+                    </li>
+                    <li>
+                    <a href="/usuarios/{{auth()->id()}}/edit">Mi cuenta</a>
+                    </li>
 
  
                 @endguest
